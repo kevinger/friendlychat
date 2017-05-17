@@ -82,6 +82,9 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
 
   void _handleSubmitted(String text) {
     _textController.clear();
+    setState(() {
+      _isComposing = false;
+    });
     ChatMessage message = new ChatMessage(
       text: text,
       animationController: new AnimationController(
@@ -109,7 +112,7 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
             new Flexible(
               child: new TextField(
                 controller: _textController,
-                onChanged: (String text)  {                //new
+                onChanged: (String text)  {
                   setState(() {
                     _isComposing = text.length > 0;
                   });
@@ -164,7 +167,7 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
           ),
          ]
        ),
-       decoration: Theme.of(context).platform == TargetPlatform.iOS ? new BoxDecoration(border: new Border(top: new BorderSide(color: Colors.grey[200]))) : null),//new
+       decoration: Theme.of(context).platform == TargetPlatform.iOS ? new BoxDecoration(border: new Border(top: new BorderSide(color: Colors.grey[200]))) : null),
    );
   }
 }
