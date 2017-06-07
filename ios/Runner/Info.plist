@@ -2,7 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDevelopmentRegion</key>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+        <array>
+            <!-- reverse url of your client id, for example: -->
+        	<string>com.googleusercontent.apps.1095714742842-3vovname6g0jg13tcraaupuakck71r8h</string>
+            <!-- bundle id, for example: -->
+            <string>com.yourcompany.friendlychat</string>
+        </array>
+    <key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
